@@ -11,6 +11,14 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raweej/nokRbac.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "@nestjs/axios": "^3.0.0",
     "@nestjs/common": "^10.1.1",

@@ -14,6 +14,7 @@ export class RbacGuard implements CanActivate {
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
+    const path = context.switchToHttp().getRequest().route.path;
 
     const token = this.extractTokenFromHeader(request);
 
@@ -22,7 +23,7 @@ export class RbacGuard implements CanActivate {
       return false;
     }
     //call rbac_service
-    const res = await this.rbacService.permission(token);
+    const res = await this.rbacService.permission(token, path);
     //attach permission to request
     request.payload = res;
 

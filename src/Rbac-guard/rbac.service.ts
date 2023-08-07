@@ -10,11 +10,12 @@ export class RbacService {
     private httpService: HttpService
   ) {}
 
-  async permission(token: string) {
+  async permission(token: string, path: string) {
     const url = this.rbacOptions.url;
     const response = await this.httpService.axiosRef.get(url, {
       headers: {
         Authorization: token,
+        path: path,
       },
     });
     return response.data;

@@ -1,5 +1,5 @@
 {
-  "name": "@nok/guards",
+  "name": "@nokteam/guards",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -13,11 +13,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Raweej/nokRbac.git"
+    "url": "git+https://github.com/Raweej/nokRbac.git"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/nokteam"
   },
   "dependencies": {
     "@nestjs/axios": "^3.0.0",

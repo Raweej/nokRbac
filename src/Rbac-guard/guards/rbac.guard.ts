@@ -22,7 +22,7 @@ export class RbacGuard implements CanActivate {
 
     //check token if type not have and is not Bearer
     if (!token) {
-      return false;
+      throw new UnauthorizedException();
     }
 
     //call rbac_service
